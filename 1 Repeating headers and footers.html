@@ -1,0 +1,146 @@
+<apex:page renderAs="pdf" standardStylesheets="false" showHeader="false" applyHtmlTag="false">
+
+    <head>
+
+        <style>
+            @page {
+                margin-top: 70px;
+                margin-left: 0px;
+                margin-right: 0px;
+                background-color: #EDEDED;
+                @top-left {
+                    content: element(top-left-div);
+                }
+                @top-center {
+                    content: element(top-center-div);
+                }
+                @top-right {
+                    content: element(top-right-div);
+                }
+                @bottom-left {
+                    content: element(bottom-left-div);
+                }
+                @bottom-center {
+                    content: element(bottom-center-div);
+                }
+                @bottom-right {
+                    content: element(bottom-right-div);
+                }
+            }
+            
+            .top-left-div {
+                position: running(top-left-div);
+                background-color: #01a3d6;
+                color: white;
+                text-align: left;
+                border-bottom: 2px solid black;
+                padding: 17.5px;
+            }
+            
+            .top-center-div {
+                position: running(top-center-div);
+                background-color: #01a3d6;
+                color: white;
+                text-align: center;
+                margin-left: -1px;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+            
+            .top-right-div {
+                position: running(top-right-div);
+                background-color: #01a3d6;
+                text-align: right;
+                color: white;
+                margin-left: -1px;
+                border-bottom: 2px solid black;
+                padding: 25px;
+            }
+            
+            .bottom-left-div {
+                position: running(bottom-left-div);
+                color: #666666;
+                text-align: left;
+                margin: 5px;
+            }
+            
+            .bottom-center-div {
+                position: running(bottom-center-div);
+                color: #666666;
+                text-align: center;
+                margin: 5px;
+            }
+            
+            .bottom-right-div {
+                position: running(bottom-right-div);
+                color: #666666;
+                text-align: right;
+                margin: 5px;
+            }
+            
+            .pagenumber:before {
+                content: counter(page);
+            }
+            
+            .pagecount:before {
+                content: counter(pages);
+            }
+            
+            .content {
+                margin: 10px;
+            }
+            
+            .pageFont {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER INFO BEGIN-->
+
+        <div class="top-left-div pageFont">
+
+            <!-- THE LOGO -->
+            <img src="{!URLFOR($Resource.cloudLogo)}" alt="Company Logo" height="30px" />
+
+        </div>
+        <div class="top-center-div pageFont">
+            TOP - CENTER
+        </div>
+        <div class="top-right-div pageFont">
+
+            <div>
+                TOP - RIGHT
+
+            </div>
+        </div>
+        <!-- HEADER INFO END-->
+        <!-- FOOTER INFO BEGIN-->
+        <div class="bottom-left-div pageFont">
+            BOTTOM - LEFT
+        </div>
+        <div class="bottom-center-div pageFont">
+            BOTTOM - CENTER
+        </div>
+        <div class="bottom-right-div pageFont">
+            <span class="pagenumber" /> |
+            <span class="pagecount" />
+        </div>
+
+
+        <!-- FOOTER INFO END-->
+        <div class="content pageFont">
+            THE CONTENT IN PAGE 1
+        </div>
+
+
+        <!-- NEW PAGE -->
+        <div style="page-break-after:always;" />
+
+        <div class="content pageFont">
+            THE CONTENT IN PAGE 2
+        </div>
+
+    </body>
+</apex:page>
