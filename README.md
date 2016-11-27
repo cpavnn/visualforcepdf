@@ -13,14 +13,14 @@ and this link for a better understanding
 http://www.antennahouse.com/CSSInfo/CSS-Page-Tutorial-en.pdf
 
 3 Demo Examples are provided
-Demo 1: 
+Demo 1: https://awesomepdf-developer-edition.ap1.force.com/PDF/awesomePDF_Case1
 Repeating Header / Footer
 
-Demo 2:
+Demo 2: https://awesomepdf-developer-edition.ap1.force.com/PDF/awesomePDF_Case2
 Repeating Header / Footer
 First Page is LandScape and rest all are in Portrait
 
-Demo 3:
+Demo 3:https://awesomepdf-developer-edition.ap1.force.com/PDF/awesomePDF_Case3
 Repeating Header / Footer
 First n Pages is Portrait and rest n in LandScapemode
 
