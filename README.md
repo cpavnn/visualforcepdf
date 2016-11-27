@@ -23,3 +23,6 @@ First Page is LandScape and rest all are in Portrait
 Demo 3:
 Repeating Header / Footer
 First n Pages is Portrait and rest n in LandScapemode
+
+Usage: 
+Download the html files, create a new visualforce page and the source code of the html file.
